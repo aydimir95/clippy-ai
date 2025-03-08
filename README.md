@@ -48,6 +48,7 @@ Clippy-Ai is an openAI inside Autodesk Revit integration that enables users to m
 * [Alloy Kemp](https://github.com/alloy6063)
 * [Francisco Maranchello](https://github.com/franmaranchello)
 * [Peter Zhang](https://github.com/ZMPeterZhang)
+* [Aydimir Aydimirov](https://github.com/aydimir95)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- WORKFLOW EXAMPLES -->
