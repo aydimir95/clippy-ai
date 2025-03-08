@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:clippy_ai"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!-- Add your resources here -->
     </Application.Resources>
 </Application>

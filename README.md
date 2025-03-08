@@ -42,7 +42,7 @@
 ## About The Project
 Clippy-Ai is an openAI inside Autodesk Revit integration that enables users to make text-based prompts to the openAI gpt-4.0 model and receive live updates to their open model based on their requests.
 * [Abhishek Bawiskar](https://github.com/abawiskar)
-* [Matthew Breau](https://github.com/MBreauAtBBB)
+* [Matthew Breau](https://github.com/aydimir95AtBBB)
 * [Chris Chan](https://github.com/chriskc)
 * [Russell Feathers](https://github.com/rfeathers068)
 * [Alloy Kemp](https://github.com/alloy6063)

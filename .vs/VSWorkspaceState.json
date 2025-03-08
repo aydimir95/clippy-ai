@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\clippy-ai",
+    "\\frontend",
+    "\\frontend\\Project.extension",
+    "\\frontend\\Project.extension\\Clippy.tab",
+    "\\frontend\\Project.extension\\Clippy.tab\\Chat_GPT.panel",
+    "\\frontend\\Project.extension\\Clippy.tab\\Chat_GPT.panel\\Chat.pushbutton"
+  ],
+  "SelectedNode": "\\frontend\\Project.extension\\Clippy.tab\\Chat_GPT.panel\\Chat.pushbutton\\MainWindow_bouncy_clippy.xaml",
+  "PreviewInSolutionExplorer": false
+}

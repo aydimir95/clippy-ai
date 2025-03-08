@@ -260,6 +260,32 @@ def Read_file_incurrent_directory_to_string(file_path):
         print ("Error reading file: {e}")
         return None
 
+def execute_in_context(code_text):
+    """Helper function to execute code in Revit context"""
+    try:
+        import json
+        from Autodesk.Revit.DB import Transaction
+        
+        # Parse JSON response
+        code_dict = json.loads(code_text)
+        # Extract Python code from response
+        python_code = code_dict["response"]
+        # Clean markdown
+        clean_code = python_code.replace('```python\n', '').replace('```', '').strip()
+        print("Executing code:", clean_code)
+        
+        # Get document
+        doc = __revit__.ActiveUIDocument.Document
+        
+        # Execute code in transaction if needed
+        with rpw.db.Transaction('Execute Code'):
+            exec(clean_code, {'__revit__': __revit__, 'doc': doc})
+            
+        print("Code executed successfully")
+    except Exception as e:
+        print("Error in execute_in_context:", str(e))
+        raise  # Re-raise to see full error in UI
+
 def query_chat_gpt(window):    
     state = Custom_Window_State()
 
@@ -327,7 +353,7 @@ def query_chat_gpt(window):
             clean_code = clean_code_snippet(responseString)
             print("Code response: ", clean_code)
             state.data.append(("Code response: ", clean_code))
-            exec(clean_code)
+            custom_event.raise_event(execute_in_context, clean_code)  # Fixed syntax
 
             x = ('successful', '')
             state.data.append(x)
@@ -368,4 +394,3 @@ def query_chat_gpt(window):
                 state.data.append(x)
                 break  # Ensure to break out of the loop
 
-        

@@ -1,0 +1,3 @@
+C:\Users\aydimir95\source\repos\clippy-ai\frontend\Project.extension\Clippy.tab\Chat_GPT.panel\CLIPPY_VS\CLIPPY_VS\obj\Debug\CLIPPY_VS.csproj.AssemblyReference.cache
+C:\Users\aydimir95\source\repos\clippy-ai\frontend\Project.extension\Clippy.tab\Chat_GPT.panel\CLIPPY_VS\CLIPPY_VS\obj\Debug\App.g.cs
+C:\Users\aydimir95\source\repos\clippy-ai\frontend\Project.extension\Clippy.tab\Chat_GPT.panel\CLIPPY_VS\CLIPPY_VS\obj\Debug\CLIPPY_VS_MarkupCompile.cache

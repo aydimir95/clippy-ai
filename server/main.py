@@ -3,11 +3,10 @@ import json
 from chatgpt import *
 
 app = Flask(__name__)
-# app.secret_key = FLASK_SECRET_KEY
 
 @app.route('/', methods=['GET'])
 def test():
-    return "Please use Post"
+    return jsonify({"message": "Please use Post"})
 
 @app.route('/', methods=['POST'])
 def send_msg():
@@ -15,14 +14,14 @@ def send_msg():
     print(usermsg)
     airesponse = callToOpenAI(usermsg['client'])
     print(airesponse)
-    res = make_response(airesponse)
-    res.mimetype = 'application/json'
-    res.status_code = 200
-    return res
+    
+    # Ensure the response is properly formatted as JSON
+    response_data = {"response": airesponse}
+    return jsonify(response_data)
 
 @app.errorhandler(405)
 def method_not_allowed(e):
-    return 'Method not allowed', 405
+    return jsonify({"error": "Method not allowed"}), 405
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
